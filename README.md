@@ -12,7 +12,6 @@ git clone https://github.com/enyene/zuri-nft.git
 
 Simply run the `main.py` file.
 
-```js
-py main.py 'path/to/csv/file'
 ```
+py main.py 'path/to/csv/file'
 ```
