@@ -10,13 +10,12 @@ git clone https://github.com/enyene/zuri-nft.git
 ```
 2. ### Install dependencies.
 
-Simply run the `pip install -r requirements.txt` 
+```
+pip install -r requirements.txt
+```
+
+3. ### Run Script
 
 ```
-3. ### Start the program.
-
-Simply run the `main.py` file.
-
-```
-py main.py 'path/to/csv/file'
+py main.py 'path/of/csv/file'
 ```
