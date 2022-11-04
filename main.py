@@ -50,13 +50,13 @@ def generate_hash(csvfile):
 
     data.update(df_tmp)
 
-    with open('hng.json', 'w') as f:
+    with open(f"{row.Filename}.json", 'w') as f:
         json.dump(data, f, indent=4)
 
     
     encrypt = hashlib.sha256()
 
-    with open('hng.json', 'rb') as f:
+    with open(f"{row.Filename}.json", 'rb') as f:
         for byte_block in iter(lambda: f.read(4096), b""):
             encrypt.update(byte_block)
         hash = encrypt.hexdigest()
