@@ -25,7 +25,7 @@ def generate_hash(csvfile):
             row.Filename: {
                 "format": "CHIP-0007",
                 "name": row.Filename,
-                "minting_tool": "Team- X",
+                "minting_tool": "Team-X",
                 "sensitive_content": False,
                 "series_number": row['Series Number'],
                 "series_total": 1000,
@@ -33,6 +33,39 @@ def generate_hash(csvfile):
                     {
                         "trait_type": "gender",
                         "value": row.Gender
+                    },
+
+                    {
+                        "trait_type": "hair",
+                        "value": row.Attributes.split(';')[0].split(':')[1]
+                    },
+                    {
+                        "trait_type": "eyes",
+                        "value": row.Attributes.split(';')[1].split(':')[1]
+                    },
+                    {
+                        "trait_type": "teeth",
+                        "value": row.Attributes.split(';')[2].split(':')[1]
+                    },
+                    {
+                        "trait_type": "clothing",
+                        "value": row.Attributes.split(';')[3].split(':')[1]
+                    },
+                    {
+                        "trait_type": "accessories",
+                        "value": row.Attributes.split(';')[4].split(':')[1]
+                    },
+                    {
+                        "trait_type": "mask",
+                        "value": row.Attributes.split(';')[5].split(':')[1]
+                    },
+                    {
+                        "trait_type": "strength",
+                        "value": row.Attributes.split(';')[6].split(':')[1]
+                    },
+                    {
+                        "trait_type": "weakness",
+                        "value": row.Attributes.split(';')[6].split(':')[1]
                     },
                 ],  "collection": {
                     "name": "Zuri NFT Tickets for Free Lunch",
